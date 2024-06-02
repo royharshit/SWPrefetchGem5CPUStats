@@ -574,6 +574,10 @@ class CPU : public BaseCPU
     {
         CPUStats(CPU *cpu);
 
+        /** Stat for avg ROB Occupancy */
+        statistics::Average avgROBOccupancy;
+        /** Stat for max ROB Occupancy */
+        statistics::Scalar maxROBOccupancy;
         /** Stat for total number of times the CPU is descheduled. */
         statistics::Scalar timesIdled;
         /** Stat for total number of cycles the CPU spends descheduled. */
